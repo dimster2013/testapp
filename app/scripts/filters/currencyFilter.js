@@ -1,10 +1,3 @@
-//todo cleanup code
-
-// To declare a filter we pass in two parameters to app.filter
-
-// The first parameter is the name of the filter
-// second is a function that will return another function that does the actual work of the filter
-
 angular.module('vodaApp').filter('currency', function() {
   var defaultCurrency = '$';
   return function(input, currencySymbol) {

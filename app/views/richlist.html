@@ -1,40 +1,38 @@
 <div class="mydiv">
   <h1>Celebrity Rich List</h1>
 
-  <form role="form">
+  <form>
+
     <div class="form-group">
-      <label for="birthPlace">BirthPlace:</label>
-      <select ng-model="birthPlace" ng-options="c for c in countries">
-      </select>
+      <div class="col-md-6">
+        <label for="birthPlace">BirthPlace:</label>
+        <select class="form-control" ng-model="birthPlace" ng-options="c for c in countries">
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="currencySymbol">Currency:</label>
+        <select class="form-control" ng-model="currencySymbol">
+          <option>AUD$</option>
+          <option>USD$</option>
+          <option>EUR€</option>
+        </select>
+      </div>
     </div>
 
     <div class="form-group">
-      <label for="currencySymbol">Currency:</label>
-      <select ng-model="currencySymbol">
-        <option>AUD$</option>
-        <option>USD$</option>
-        <option>EUR€</option>
-      </select>
+      <div class="col-md-6">
+        <label for="search">Search:</label>
+        <input type="search" id="search" ng-model="search" placeholder="search">
+      </div>
+      <div class="col-md-6">
+        <label for="sorter">Sorter:</label>
+        <select ng-model="sorter">
+          <option>rank</option>
+          <option>age</option>
+          <option>netWorth</option>
+        </select>
+      </div>
     </div>
-
-
-    {{sorter}}
-    <div class="form-group">
-      <label for="sorter">Sorter:</label>
-      <select ng-model="sorter">
-        <option>rank</option>
-        <option>age</option>
-        <option>netWorth</option>
-      </select>
-    </div>
-
-    currencySymbol
-
-    <div class="form-group">
-      <label for="search">Search:</label>
-      <input type="search" class="form-control" id="search" ng-model="search" placeholder="search">
-    </div>
-
   </form>
 
   <div>
@@ -51,8 +49,7 @@
       </tr>
       <tr>
         <td>
-          Net Worth:{{ person.netWorth | currency:currencySymbol  }}
-
+          Net Worth:{{ person.netWorth | currency:currencySymbol }}
         </td>
       </tr>
       <tr>
@@ -65,9 +62,6 @@
           Country of birth:{{ person.country }}
         </td>
       </tr>
-
     </table>
-
-
   </div>
 </div>

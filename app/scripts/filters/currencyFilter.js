@@ -1,3 +1,4 @@
+'use strict'
 angular.module('vodaApp').filter('currency', function() {
   var defaultCurrency = '$';
   return function(input, currencySymbol) {

@@ -224,8 +224,8 @@ module.exports = function (grunt) {
     uglify: {
        dist: {
          files: {
-           'dist/scripts/scripts.js': [
-             'app/scripts/app.js'
+           '<%= yeoman.dist %>/scripts/scripts.js': [
+             '<%= yeoman.dist %>/scripts/scripts.js'
            ]
          }
        }
@@ -397,6 +397,7 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
+    'test',
     'htmlmin'
   ]);
 
